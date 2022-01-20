@@ -33,15 +33,30 @@ function yearsToMonths(year) {
     return year * 12;
 };
 
+//HTML Connectors
 let btn = document.getElementById("btnCalculate");
 btn.onclick = function() {
-let price = document.getElementById("inputPrice").value;
-let downPayment = document.getElementById("inputDownPayment").value;
-let loanAmount = price - downPayment;
-let interest = document.getElementById("inputAPR").value;
-let term = document.getElementById("inputLength").value;
 
-let payment = calculate(loanAmount, interest, term)
+    //price functions
+    let price = document.getElementById("inputPrice").value;
 
-postPayments(payment);
+    if (price <= 0) {
+        alert("Invalid Price - No Negatives Nancies");
+        return false;
+};
+
+    if (price == "") {
+        alert("Please Enter a Price - Ain't Such a Thing as Free Lunch");
+        return false;
+}
+
+    //other functions
+    let downPayment = document.getElementById("inputDownPayment").value;
+    let loanAmount = price - downPayment;
+    let interest = document.getElementById("inputAPR").value;
+    let term = document.getElementById("inputLength").value;
+
+    let payment = calculate(loanAmount, interest, term)
+
+    postPayments(payment);
 };
