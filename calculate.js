@@ -1,16 +1,20 @@
 //r = rate
 //p = principal of mortgage
-//N = Period of Mortgage (in)
+//N = Period of Mortgage (in Months)
 
 //main calculating function
 function calculate(p, r, n) {
 
-    let monthlyPayment = null;
-
     //establishes rate by calling outside function to convert annual percentage to monthly decimal
     r = percentToMonthlyDecimal(r);
 
-    return monthlyPayment;
+    //Establishes number of total monthly payments from user-input years (length)
+    n = yearsToMonths;
+
+    //Standard Mortgage Payment Function
+    let payment = ((p * r) * Math.pow((1 + r), n)) / (Math.pow((1 + r), n) - 1);
+
+    return parseFloat(payment.toFixed(2));
 
 };
 
@@ -19,6 +23,25 @@ function percentToMonthlyDecimal(percent) {
     return (percent/12)/100;
 };
 
+function postPayments(payment) {
+    let htmlE1.innerText = document.getElementById("outputPayment");
+
+    htmlE1.innerText = "$" + payment;
+}
+
 function yearsToMonths(year) {
     return year * 12;
+};
+
+let btn = document.getElementById("btnCalculate");
+btn.onclick = function() {
+let price = document.getElementById("inputPrice").value;
+let downPayment = document.getElementById("inputDownPayment").value;
+let loanAmount = price - downPayment;
+let interest = document.getElementById("inputAPR").value;
+let term = document.getElementById("inputLength").value;
+
+let payment = calculate(loanAmount, interest, term)
+
+postPayments(payment);
 };
