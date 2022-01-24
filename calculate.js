@@ -12,7 +12,7 @@ function calculate(p, r, n) {
     n = yearsToMonths;
 
     //Standard Mortgage Payment Function
-    let payment = ((p * r) * Math.pow((1 + r), n)) / (Math.pow((1 + r), n) - 1);
+    var payment = ((p * r) * Math.pow((1 + r), n)) / (Math.pow((1 + r), n) - 1);
 
     return parseFloat(payment.toFixed(2));
 
@@ -24,7 +24,7 @@ function percentToMonthlyDecimal(percent) {
 };
 
 function postPayments(payment) {
-    let htmlE1.innerText = document.getElementById("outputPayment");
+    var htmlE1 = document.getElementById("outputPayment");
 
     htmlE1.innerText = "$" + payment;
 }
@@ -34,29 +34,35 @@ function yearsToMonths(year) {
 };
 
 //HTML Connectors
-let btn = document.getElementById("btnCalculate");
+var btn = document.getElementById("btnCalculate");
 btn.onclick = function() {
 
     //price functions
-    let price = document.getElementById("inputPrice").value;
+    var price = document.getElementById("inputPrice").value;
 
     if (price <= 0) {
         alert("Invalid Price - No Negatives Nancies");
         return false;
-};
+    };
 
     if (price == "") {
         alert("Please Enter a Price - Ain't Such a Thing as Free Lunch");
         return false;
-}
+    }
 
     //other functions
-    let downPayment = document.getElementById("inputDownPayment").value;
-    let loanAmount = price - downPayment;
-    let interest = document.getElementById("inputAPR").value;
-    let term = document.getElementById("inputLength").value;
+    var downPayment = document.getElementById("inputDownPayment").value;
+    var loanAmount = price - downPayment;
+    var interest = document.getElementById("inputAPR").value;
+    var term = document.getElementById("inputLength").value;
 
-    let payment = calculate(loanAmount, interest, term)
+    var payment = calculate(loanAmount, interest, term);
 
     postPayments(payment);
 };
+
+console.log(price);
+console.log(downPayment);
+console.log(interest);
+console.log(term);
+console.log(payment);
