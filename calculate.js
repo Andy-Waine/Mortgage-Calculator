@@ -2,12 +2,6 @@
 //p = principal of mortgage
 //N = Period of Mortgage (in Months)
 
-var price = document.getElementById("inputPrice").value;
-var downPayment = document.getElementById("inputDownPayment").value;
-var loanAmount = price - downPayment;
-var interest = document.getElementById("inputAPR").value;
-var term = document.getElementById("inputLength").value;
-var payment = calculate(loanAmount, interest, term);
 
 //main calculating function
 function calculateMortgage(p, r, n) {
@@ -17,46 +11,51 @@ function calculateMortgage(p, r, n) {
     r = percentToDecimal(r);
 
     //Establishes number of total monthly payments from user-input years (length)
-    n = yearsToMonths;
+    n = yearsToMonths(n);
 
     //Standard Mortgage Payment Function
     var pmt = (r * p) / (1- (Math.pow((1 + r), (-n))));
 
     return parseFloat(pmt.toFixed(2));
 
+    console.log(p, r, n);
+
 };
 
 //outside functions used in calculate(p, r, n)
 function percentToDecimal(percent) {
     return (percent/12)/100;
-};
-
-function postPayments(payment) {
-    var htmlE1 = document.getElementById("outputPayment");
-
-    htmlE1.innerText = "$" + payment;
 }
 
 function yearsToMonths(year) {
     return year * 12;
-};
+}
+
+function postPayments(payment) {
+
+    var htmlE1 = document.getElementById("outMonthly");
+
+    htmlE1.innerText = "$" + payment;
+}
 
 
-
-//HTML Connectors
 var btn = document.getElementById("btnCalculate");
 btn.onclick = function() {
+    var cost = document.getElementById("inCost").value;
+    var downPayment = document.getElementById("inDown").value;
+    var interest = document.getElementById("inAPR").value;
+    var term = document.getElementById("inPeriod").value;
 
-    //price functions
 
-    //other functions
+    var amountBorrowed = (cost - downPayment);
 
 
-    postPayments(payment);
+    var pmt = calculateMortgage(amountBorrowed, interest, term);
+
+    console.log(cost, downPayment, interest, term, amountBorrowed);
+    console.log(pmt);
+
+    postPayments(pmt);
+
 };
 
-console.log(price);
-console.log(downPayment);
-console.log(interest);
-console.log(term);
-console.log(payment);
