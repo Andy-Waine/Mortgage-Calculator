@@ -18,29 +18,56 @@
 </head>
 
 <body>
-
+    <!-- Header/NavBar -->
     <div class="container">
         <div class="row">
-            <div class="col-md-12 d-flex flex-row" style="background: lightblue;">
-                <div class="logo"></div>
-                <i class="fas fa-search"></i>
-                <i class="fas fa-bell"></i>
-                <i class="fas fa-cog"></i>
+            <div class="col-md-12 d-flex flex-row align-items-center font-16 purple-color" style="background: lightblue;">
+                <div class="logo me-auto"></div>
+                <i class="fas fa-search px-4"></i>
+                <i class="fas fa-bell px-4 notification"></i>
+                <i class="fas fa-cog ps"></i>
             </div>    
         </div>
+
+        <div class="row">
+            <div class="col-md-2" style="background: lightcoral;">
+                side menu
+            </div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div>
+                            Main Column 1
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div>
+                            Main Column 2
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            Main Column 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+        <h1>Mortgage Payment Calculator</h1>
+
+        <p><b>Price of Home:</b> <input type="text" id="inCost"/> $</p>
+        <p><b>Down Payment:</b> <input type="text" id="inDown"/> $</p>
+        <p><b>Interest Rate (APR):</b> <input type="text" id="inAPR"/> %</p>
+        <p><b>Length of Mortgage:</b> <input type="text" id="inPeriod"/> Years</p>
+        <p><button id="btnCalculate">Calculate Payment</button></p>
+        <hr />
+
+        <p><b>Your Monthly Payment: <span id="outMonthly"></span></b></p>
     </div>
-
-    <h1>Mortgage Payment Calculator</h1>
-
-    <p><b>Price of Home:</b> <input type="text" id="inCost"/> $</p>
-    <p><b>Down Payment:</b> <input type="text" id="inDown"/> $</p>
-    <p><b>Interest Rate (APR):</b> <input type="text" id="inAPR"/> %</p>
-    <p><b>Length of Mortgage:</b> <input type="text" id="inPeriod"/> Years</p>
-    <p><button id="btnCalculate">Calculate Payment</button></p>
-    <hr />
-
-    <p><b>Your Monthly Payment: <span id="outMonthly"></span></b></p>
-   
 
     <script src="calculate.js"></script>
 
