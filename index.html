@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head></head>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Mortgage Calculator</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
 
 <body>
 
     <h1>Mortgage Payment Calculator</h1>
 
 
-    <p><b>Price of Home:</b> <input type="text" id="inCost"/></p>
-    <p><b>Down Payment:</b> <input type="text" id="inDown"/></p>
-    <p><b>Interest Rate (APR):</b> <input type="text" id="inAPR"/></p>
-    <p><b>Length of Mortgage:</b> <input type="text" id="inPeriod"/></p>
+    <p><b>Price of Home:</b> <input type="text" id="inCost"/> $</p>
+    <p><b>Down Payment:</b> <input type="text" id="inDown"/> $</p>
+    <p><b>Interest Rate (APR):</b> <input type="text" id="inAPR"/> %</p>
+    <p><b>Length of Mortgage:</b> <input type="text" id="inPeriod"/> Years</p>
     <p><button id="btnCalculate">Calculate Payment</button></p>
     <hr />
 
