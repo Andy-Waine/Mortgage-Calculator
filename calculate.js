@@ -16,13 +16,14 @@ function calculateMortgage(p, r, n) {
     //Standard Mortgage Payment Function
     var pmt = (r * p) / (1- (Math.pow((1 + r), (-n))));
 
+    //Sets decimal cap at hundredths place (2 Decimals)
     return parseFloat(pmt.toFixed(2));
 
     console.log(p, r, n);
 
 };
 
-//outside functions used in calculate(p, r, n)
+//outside functions used in calculateMortgage (p, r, n)
 function percentToDecimal(percent) {
     return (percent/12)/100;
 }
@@ -31,6 +32,7 @@ function yearsToMonths(year) {
     return year * 12;
 }
 
+//Posts Final Payment to HTML
 function postPayments(payment) {
 
     var htmlE1 = document.getElementById("outMonthly");
@@ -38,7 +40,7 @@ function postPayments(payment) {
     htmlE1.innerText = "$" + payment;
 }
 
-
+//HTML Connectors
 var btn = document.getElementById("btnCalculate");
 btn.onclick = function() {
     var cost = document.getElementById("inCost").value;
