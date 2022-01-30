@@ -26,6 +26,11 @@ div.logo {
     margin-left: 35px;
 }
 
+.square{
+    width: 40px;
+    height: 40px;
+}
+
 .font-10 {
     font-size: 10px;
 }
@@ -72,6 +77,22 @@ div.logo {
 
 .purple-color {
     color: purple;
+}
+
+.grey-color {
+    color: #DBE3E5;
+}
+
+.grey-color-2 {
+    color: #BAC2C4;
+}
+
+.orange-bg-color {
+    background: #FF8872;
+}
+
+.light-purple-bg-color {
+    background: #F1F0F3;
 }
 
 i.notification {
