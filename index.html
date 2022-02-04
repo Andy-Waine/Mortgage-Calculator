@@ -32,16 +32,16 @@
         <!-- Default appearance will be as a row, but the @mediaquery in CSS re-structures it to a column for medium-sized devices or larger -->
         <div class="row">
             <div class="col-md-2 d-flex flex-md-column align-items-center" style="background: lightskyblue;">
-                <div class="my-4 font-16 square orange-bg-color white-color round-corner-small d-flex flex-row justify-content-center align-items-center">
+                <div class="my-4 mx-2 mx-md-0 font-16 square orange-bg-color white-color round-corner-small d-flex flex-row justify-content-center align-items-center">
                     <i class="fas fa-search"></i>
                 </div>
-                <div class="my-4 font-16 square grey-border purple-color round-corner-small d-flex flex-row justify-content-center align-items-center">
+                <div class="my-4 mx-2 mx-md-0 font-16 square grey-border purple-color round-corner-small d-flex flex-row justify-content-center align-items-center">
                     <i class="fas fa-expand-alt"></i>
                 </div>
-                <div class="my-4 font-16 square grey-border purple-color round-corner-small d-flex flex-row justify-content-center align-items-center">
+                <div class="my-4 mx-2 mx-md-0 font-16 square grey-border purple-color round-corner-small d-flex flex-row justify-content-center align-items-center">
                     <i class="fas fa-chart-pie"></i>
                 </div>
-                <div class="my-4 font-16 square purple-bg-color white-color round-corner-small d-flex flex-row justify-content-center align-items-center">
+                <div class="mt-auto ms-auto my-4 mx-2 mx-md-0 font-16 square purple-bg-color white-color round-corner-small d-flex flex-row justify-content-center align-items-center">
                     <i class="fas fa-plus "></i>
                 </div>
 
@@ -49,8 +49,24 @@
             <div class="col-md-10">
                 <div class="row">
                     <div class="col-md-5" style="background: lightyellow;">
-                        <div>
-                            Main Column 1
+                        <div class="p-4 d-flex flex-column purple-bg-color round-corner">
+                            <span class="text-uppercase font-10 weight-600 grey-color-2">Main Column 1</span>
+                            <span class="font-28 weight-700 white-color mt-4">Lorem Ipsum</span>
+                            <span class="font-12 weight-300 white-color">Lorem Ipsum</span>
+                            <div class="d-flex flex-row justify-content-between mt-4">
+                                <div class="d-flex flex-column">
+                                    <span class="font-16 weight-600 white-color">$9,739</span>
+                                    <span class="font-12 weight-300 grey-color-2">Sample</span>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <span class="font-16 weight-600 white-color">$40,612</span>
+                                    <span class="font-12 weight-300 grey-color-2">Sample 2</span>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <button class="py-2 text-uppercase font-12 weight-700 purple-color grey-bg-color">Button 1</button>
+                                <button class="py-2 text-uppercase font-12 weight-700 white-color orange-bg-color">Button 2</button>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-3" style="background: lightsteelblue;">
