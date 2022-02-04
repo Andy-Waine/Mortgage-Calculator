@@ -26,9 +26,17 @@ div.logo {
     margin-left: 35px;
 }
 
-.square{
+.square {
     width: 40px;
     height: 40px;
+}
+
+.grey-border {
+    border: 1px solid #dfe6e8;
+}
+
+.round-corner-small {
+    border-radius: 6px;
 }
 
 .font-10 {
@@ -83,6 +91,10 @@ div.logo {
     color: #DBE3E5;
 }
 
+.white-color {
+    color: whitesmoke;
+}
+
 .grey-color-2 {
     color: #BAC2C4;
 }
@@ -93,6 +105,10 @@ div.logo {
 
 .light-purple-bg-color {
     background: #F1F0F3;
+}
+
+.purple-bg-color {
+    background: purple;
 }
 
 i.notification {

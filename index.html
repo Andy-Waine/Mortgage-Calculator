@@ -14,12 +14,11 @@
 
     <!-- Internal CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
-    <!-- Header/NavBar -->
     <div class="container">
+        <!-- Header/NavBar -->
         <div class="row">
             <div class="col-md-12 d-flex flex-row align-items-center font-16 purple-color" style="background: lightblue;">
                 <div class="logo me-auto"></div>
@@ -29,14 +28,22 @@
             </div>    
         </div>
 
+        <!-- Lefthand NavBar -->
+        <!-- Default appearance will be as a row, but the @mediaquery in CSS re-structures it to a column for medium-sized devices or larger -->
         <div class="row">
-            <div class="col-md-2 d-flex flex-column align-items-center" style="background: lightcoral;">
-                <div class="font-16 square">
+            <div class="col-md-2 d-flex flex-md-column align-items-center" style="background: lightskyblue;">
+                <div class="my-4 font-16 square orange-bg-color white-color round-corner-small d-flex flex-row justify-content-center align-items-center">
                     <i class="fas fa-search"></i>
                 </div>
-                <i class="fas fa-expand-alt"></i>
-                <i class="fas fa-chart-pie"></i>
-                <i class="fas fa-plus "></i>
+                <div class="my-4 font-16 square grey-border purple-color round-corner-small d-flex flex-row justify-content-center align-items-center">
+                    <i class="fas fa-expand-alt"></i>
+                </div>
+                <div class="my-4 font-16 square grey-border purple-color round-corner-small d-flex flex-row justify-content-center align-items-center">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <div class="my-4 font-16 square purple-bg-color white-color round-corner-small d-flex flex-row justify-content-center align-items-center">
+                    <i class="fas fa-plus "></i>
+                </div>
 
             </div>
             <div class="col-md-10">
