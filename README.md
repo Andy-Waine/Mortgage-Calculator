@@ -1,6 +1,6 @@
 <h1 align="center">🥙 PITIA BREAD 🥙</h1>
   
-![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
+<p align="center">![badge](https://img.shields.io/badge/license-MIT-brightgreen)</p>
 
 ## Description
 🔍 A JavaScript-based Mortgage Calculator embedded within a sleek UI for easy adoption within a larger framework.
