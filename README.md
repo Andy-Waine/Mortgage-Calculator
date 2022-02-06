@@ -1,4 +1,4 @@
-<h1 align="center">🥙 PITIA BREAD 🥙</h1>
+<h1 align="center">🏡🥙 PITIA Calculator 🥙🏡</h1>
 
 ## Description
 🔍 A JavaScript-based Mortgage Calculator embedded within a sleek UI for easy adoption within a larger framework.
